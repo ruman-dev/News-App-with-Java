@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WebView">
+
+    <TextView
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleDeep"
+        android:padding="7dp"
+        android:paddingStart="30dp"
+        android:text="News App"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/layoutImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topToolbar">
+
+        <ImageView
+            android:id="@+id/coverImg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/newsapp" />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/coverImg"
+            android:background="#AB000000"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="This is demo text for testing purpose"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutImg"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/newsDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2023 সালকে কৃত্রিম বুদ্ধিমত্তার বছরও বলতে পারেন। কারণ এ বছর একাধিক AI সংক্রান্ত পরিষেবা এনেছে তথ্য প্রযুক্তি সংস্থাগুলি। আর তা নিয়ে তুমুল চর্চা বিশ্বজুড়ে। বিশেষ করে চাকরিক্ষেত্রে মানুষের জায়গা দখল করতে পারে কৃত্রিম মেধা তাই নিয়ে শুরু হয়েছে শঙ্কা! তবে এই সব চর্চার মাঝে থেমে নেই গবেষণা এবং উদ্ভাবনের কাজ।\n\nবছরভর একাধিক AI টুল লঞ্চ হয়েছে বাজারে। যার মধ্যে রয়েছে গুগল, টুইটার (বর্তমানে X) মাইক্রোসফট ইত্যাদি। প্রত্যেক সংস্থাই আলাদা আলাদা চমক নিয়ে হাজির হয়েছে মানুষের কাছে। ব্যক্তিগত স্তরে এবং ব্যবসায়িক ক্ষেত্রে একাধিক সুবিধা দিতে চলেছে আর্টিফিশিয়াল ইন্টেলিজেন্স। চলুন দেখে নেওয়া যাক 2023 সালে লঞ্চ হওয়া সেরা 5 আর্টিফিশিয়াল ইন্টেলিজেন্স।\n\nগুগল বার্ড ও জেমিনি জেনারেটিভ AI-এর ব্যবহার বাড়তে শুরু করলে গুগল নিয়ে আসে নতুন চ্যাটবট - বার্ড। পরীক্ষা-নিরীক্ষা অনেকদিন ধরে চললেও, চলতি বছর শেষের দিকে লঞ্চ হয় বার্ড। ফিচারে ঠাসা এই চ্যাটবটের নতুন চমক জেমিনি। এটি একটি শক্তিশালী ল্যাঙ্গুয়েজ মডেল। যার মাধ্যমে বার্ডকে দিয়ে একাধিক শক্ত কাজ করাতে পারবেন ইউজাররা।"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@color/purpleLight"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FF9800"
+        android:src="@drawable/baseline_keyboard_voice_24"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</RelativeLayout>
